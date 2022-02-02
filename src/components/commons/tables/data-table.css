@@ -1,0 +1,47 @@
+.search-input {
+  width: 100%;
+}
+
+@keyframes loading {
+  40% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+.tableWrapper .table tbody td span {
+  color: #fefefe;
+}
+.tableWrapper .table tbody td:last-child {
+  border-radius: 0 8px 8px 0;
+}
+.tableWrapper .loading {
+  position: relative;
+}
+.tableWrapper .loading .bar {
+  background-color: #e7e7e7;
+  height: 40px;
+  width: 100%;
+}
+.tableWrapper .loading:after {
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  left: 0;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 40px;
+  background-image: linear-gradient(
+    100deg,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.5) 60%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 200px 40px;
+  background-position: -100px 0;
+  background-repeat: no-repeat;
+  animation: loading 1s infinite;
+}
